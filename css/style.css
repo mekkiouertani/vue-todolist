@@ -1,14 +1,32 @@
 body{
-    background-color: black;
     font-family: 'Death Note Font', sans-serif;
     color: white;
+
+    margin: auto;
+    overflow: auto;
+    background: linear-gradient(315deg, rgb(22, 22, 22) 3%, rgb(31, 31, 31) 38%, rgb(0, 0, 0) 68%, rgb(22, 22, 22) 98%);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%; 
+    background-attachment: fixed;
+    position: relative;
+}
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
 }
 input[type=text] {
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
     border: none;
-    background-color: black;
+    background-color: transparent;
     color: white;
 }
 p.fs-5{
@@ -33,10 +51,10 @@ p.fs-6{
     position: absolute;
     right: 0;
     top:0;
-    transition: all .3s linear;
+    
 }
 #form-canva{
-    background-color: black;
+    background: linear-gradient(315deg, rgb(22, 22, 22) 3%, rgb(31, 31, 31) 38%, rgb(0, 0, 0) 68%, rgb(22, 22, 22) 98%);
     position: absolute;
     height: 100%;
     width: 50%;
