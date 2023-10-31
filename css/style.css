@@ -52,10 +52,11 @@ p.fs-6{
     position: absolute;
     right: 0;
     top:0;
-    
 }
 #form-canva{
-    background: linear-gradient(315deg, rgb(22, 22, 22) 3%, rgb(31, 31, 31) 38%, rgb(0, 0, 0) 68%, rgb(22, 22, 22) 98%);
+    background-image: url(../img/img-1.jpg);
+    background-size: cover;
+    background-position: center;
     position: absolute;
     height: 100%;
     width: 50%;
@@ -63,4 +64,12 @@ p.fs-6{
 }
 span.mx-2, li span{
     cursor: pointer;
+}
+#off-canva ul{
+    background-color: rgba(000, 000, 000, 0.8);
+    padding: 20px 5px;
+    border-radius: 10px;
+}
+#off-canva li{
+    margin-left: 20px;
 }
