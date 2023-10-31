@@ -17,8 +17,8 @@
                 <p class="fs-5">La persona il cui nome sarà scritto su questo quaderno morirà.</p>
                 <p class="fs-6" @click="showCanva">Leggi le altre regole</p>
                 <div class="form-group">
-                    <input type="text" placeholder="Scrivi il nome" class="mx-2">
-                    <button >Sei sicuro?</button>
+                    <input type="text" v-model="input" placeholder="Scrivi il nome" class="mx-2" @keyup.enter="addPerson">
+                    <button @click="addPerson">Sei sicuro?</button>
                 </div>
                 
                 <div class="book mt-3">

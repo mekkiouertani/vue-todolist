@@ -2,7 +2,6 @@ const { createApp } = Vue
     createApp({
         data(){
             return{
-                showCanvaB: false,
                 people: [
                     { 
                         id: 1,
@@ -19,7 +18,10 @@ const { createApp } = Vue
                         name: "Kaido",
                         done: true
                     },
-                ]
+                ],
+                lastId: 3,
+                showCanvaB: false,
+                input: "",
             }
         },
         methods: {
@@ -29,6 +31,16 @@ const { createApp } = Vue
             closeCanva(){
                 this.showCanvaB = false 
             },
+            addPerson(){
+                this.lastId++;
+                const newPerson = {
+                    id: this.lastId,
+                    name: this.input,
+                    done: false
+                }
+                this.people.push(newPerson);
+                this.input = "";
+            }
         },
         mounted(){
             
