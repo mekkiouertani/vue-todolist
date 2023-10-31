@@ -15,7 +15,7 @@
             <div class="mt-2">
                 <h1>DEATH NOTE</h1>
                 <p class="fs-5">La persona il cui nome sarà scritto su questo quaderno morirà.</p>
-                <p class="fs-6">Leggi le altre regole</p>
+                <p class="fs-6" @click="showCanva">Leggi le altre regole</p>
                 <div class="form-group">
                     <input type="text" placeholder="Scrivi il nome" class="mx-2">
                     <button >Sei sicuro?</button>
@@ -25,9 +25,9 @@
 
                 </div>
                 
-                <div id="off-canva" class="d-none">
+                <div id="off-canva"  v-show="showCanvaB" @click="closeCanva">
                     <div id="form-canva" class="container py-4">
-                         <button>Continua a scrivere nomi</button>
+                         <button @click="closeCanva">Continua a scrivere nomi</button>
                          <ul class="mt-5">
                             <li class="mt-2"> Perché il quaderno sortisca l'effetto desiderato, occorre avere in mente il volto della persona di cui si scrive il nome. In tal modo, si evita di colpire eventuali omonimi. </li>
                             <li class="mt-2"> Se entro quaranta secondi dopo che è stato scritto il nome vengono indicate anche le cause della morte, questa avverrà nella maniera stabilita. </li>
