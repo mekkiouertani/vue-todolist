@@ -39,7 +39,11 @@ const { createApp } = Vue
                     name: this.input,
                     done: false
                 }
-                this.people.push(newPerson);
+
+                if(this.input !== "" && this.input !== " "){
+                    this.people.push(newPerson);
+                }
+                
                 this.input = "";
                 console.log(this.people);
             },
