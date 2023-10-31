@@ -24,6 +24,34 @@ const { createApp } = Vue
                 minInput: 25,
                 input: "",
                 showBeCareful: false,
+                carouselImage: [
+                    {
+                        image: 'img/carousel-1.png',
+                        name: 'Ryuk',
+                        id: 1
+                    },
+                    {
+                        image: 'img/carousel-2.png',
+                        name: 'L',
+                        id: 2
+                    },
+                    {
+                        image: 'img/carousel-3.png',
+                        name: 'Light',
+                        id: 3
+                    },
+                    {
+                        image: 'img/carousel-4.png',
+                        name: 'Mello',
+                        id: 4
+                    },
+                    {
+                        image: 'img/carousel-5.png',
+                        name: 'Misa',
+                        id: 5
+                    },
+                ],
+                activeSlideCarousel: 0,
             }
         },
         methods: {
@@ -61,7 +89,7 @@ const { createApp } = Vue
             },
             timeRemoveCareful(){
                 setTimeout(this.removeCareful, 2000)
-            }
+            },
         },
         mounted(){
 

@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="app" tabindex="0">
-        <div class="container d-flex justify-content-center align-items-center">
+    <div id="app" tabindex="0"> 
+        <div class="container d-flex justify-content-center align-items-center position-relative">
             <div class="mt-2">
+
                 <h1>DEATH NOTE</h1>
                 <p class="fs-5">La persona il cui nome sarà scritto su questo quaderno morirà.</p>
                 <p class="fs-6" @click="showCanva">Leggi le altre regole</p>
@@ -39,6 +40,11 @@
                         </div>
                     </Transition>
                     
+                    <div class="carousel position-absolute">
+                        <img :src="carouselImage[activeSlideCarousel].image" :alt="carouselImage[activeSlideCarousel].name">
+                        <p class="fs-2 position-absolute">{{carouselImage[activeSlideCarousel].name}}</p>
+                    </div>
+
                 </div>
                 
                 <Transition name="slide-fade">
@@ -55,6 +61,7 @@
                     </div>
                 </Transition>
 
+                
             </div>
         </div>
     </div>
