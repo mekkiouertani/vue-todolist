@@ -40,7 +40,11 @@ const { createApp } = Vue
                 }
                 this.people.push(newPerson);
                 this.input = "";
-            }
+                console.log(this.people);
+            },
+            removePerson(index){
+                this.people.splice(index, 1)
+            },
         },
         mounted(){
             
