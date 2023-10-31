@@ -100,6 +100,7 @@ span.mx-2, li span{
 transform: translateX(-20px);
 opacity: 0;
 }
+/* CAROUSEL */
 .carousel{
     height: 400px;
     width: 300px;
@@ -118,4 +119,14 @@ opacity: 0;
     background-color: rgba(000, 000, 000, 0.5);
     padding: 0 10px;
     border-radius: 10px;
+}
+/* TRANSITION CAROUSEL */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }

@@ -52,6 +52,7 @@ const { createApp } = Vue
                     },
                 ],
                 activeSlideCarousel: 0,
+                interval: null,
             }
         },
         methods: {
@@ -66,7 +67,7 @@ const { createApp } = Vue
                 const newPerson = {
                     id: this.lastId,
                     name: this.input,
-                    done: false
+                    done: false,
                 }
 
                 if(this.input !== "" && this.input !== " "){
@@ -90,8 +91,14 @@ const { createApp } = Vue
             timeRemoveCareful(){
                 setTimeout(this.removeCareful, 2000)
             },
+            nextImage(){
+                (this.activeSlideCarousel === this.people.length - 1) ? this.activeSlideCarousel = 0 : this.activeSlideCarousel++;
+            },
+            startAutoPlay(){
+                this.interval = setInterval(this.nextImage, 2500);
+            },
         },
         mounted(){
-
+            this.startAutoPlay()
         }
     }).mount('#app')

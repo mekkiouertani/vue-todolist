@@ -40,10 +40,12 @@
                         </div>
                     </Transition>
                     
-                    <div class="carousel position-absolute">
-                        <img :src="carouselImage[activeSlideCarousel].image" :alt="carouselImage[activeSlideCarousel].name">
-                        <p class="fs-2 position-absolute">{{carouselImage[activeSlideCarousel].name}}</p>
-                    </div>
+                    <Transition name="slide-fade">
+                        <div class="carousel position-absolute" :key="activeSlideCarousel">
+                            <img :src="carouselImage[activeSlideCarousel].image" :alt="carouselImage[activeSlideCarousel].name">
+                            <p class="fs-2 position-absolute">{{carouselImage[activeSlideCarousel].name}}</p>
+                        </div>
+                    </Transition>
 
                 </div>
                 
