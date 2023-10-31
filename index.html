@@ -22,7 +22,14 @@
                 </div>
                 
                 <div class="book mt-3">
-
+                    <ul class="mt-2">
+                        <li v-for="(person,index) in people" :key="person.id" class="border-bottom d-flex justify-content-between mt-2">
+                            {{person.name}}
+                            <span class="mx-2">
+                                X
+                            </span>
+                        </li>
+                    </ul>
                 </div>
                 
                 <div id="off-canva"  v-show="showCanvaB" @click="closeCanva">
