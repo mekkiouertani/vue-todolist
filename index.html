@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/death-note-font" rel="stylesheet">
     <title>Vue To Do List</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -10,7 +11,34 @@
 </head>
 <body>
     <div id="app">
+        <div class="container d-flex justify-content-center align-items-center">
+            <div class="mt-2">
+                <h1>DEATH NOTE</h1>
+                <p class="fs-5">La persona il cui nome sarà scritto su questo quaderno morirà.</p>
+                <p class="fs-6">Leggi le altre regole</p>
+                <div class="form-group">
+                    <input type="text" placeholder="Scrivi il nome" class="mx-2">
+                    <button >Sei sicuro?</button>
+                </div>
+                
+                <div class="book mt-3">
 
+                </div>
+                
+                <div id="off-canva" class="d-none">
+                    <div id="form-canva" class="container py-4">
+                         <button>Continua a scrivere nomi</button>
+                         <ul class="mt-5">
+                            <li class="mt-2"> Perché il quaderno sortisca l'effetto desiderato, occorre avere in mente il volto della persona di cui si scrive il nome. In tal modo, si evita di colpire eventuali omonimi. </li>
+                            <li class="mt-2"> Se entro quaranta secondi dopo che è stato scritto il nome vengono indicate anche le cause della morte, questa avverrà nella maniera stabilita. </li>
+                            <li class="mt-2"> Se le cause non vengono specificate, le vittime designate moriranno tutte per arresto cardiaco.  </li>
+                            <li class="mt-2"> Dopo aver indicato le cause della morte, si hanno a disposizione sei minuti e quaranta secondi per scrivere eventuali dettagli sulle condizioni della stessa. </li>
+                         </ul>
+                    </div>
+                 </div>
+
+            </div>
+        </div>
     </div>
 
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

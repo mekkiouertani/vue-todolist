@@ -1,0 +1,45 @@
+body{
+    background-color: black;
+    font-family: 'Death Note Font', sans-serif;
+    color: white;
+}
+input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background-color: black;
+    color: white;
+}
+p.fs-5{
+    max-width: 500px;
+}
+p.fs-6{
+    cursor: pointer;
+    text-align: right;
+}
+.form-group{
+    text-align: right;
+}
+.book{
+    border: 1px solid white;
+    height: 700px;
+    width: 500px;
+}
+#off-canva{
+    background-color:rgba(209, 209, 209, 0.5);
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top:0;
+    transition: all .3s linear;
+}
+#form-canva{
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    right: 0;
+}
+                                                
