@@ -50,6 +50,9 @@ const { createApp } = Vue
             removePerson(index){
                 this.people.splice(index, 1)
             },
+            markAsDone(index){
+                this.people[index].done = !this.people[index].done
+            }
         },
         mounted(){
             
