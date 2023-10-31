@@ -21,6 +21,7 @@ const { createApp } = Vue
                 ],
                 lastId: 3,
                 showCanvaB: false,
+                minInput: 25,
                 input: "",
             }
         },
