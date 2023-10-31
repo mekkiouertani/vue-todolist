@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="app" tabindex="0"> 
-        <div class="container d-flex justify-content-center align-items-center position-relative">
+        <div class="container d-flex justify-content-center align-items-center">
             <div class="mt-2">
 
                 <h1>DEATH NOTE</h1>
@@ -40,7 +40,7 @@
                         </div>
                     </Transition>
                     
-                    <Transition name="slide-fade">
+                    <Transition name="fade">
                         <div class="carousel position-absolute" :key="activeSlideCarousel">
                             <img :src="carouselImage[activeSlideCarousel].image" :alt="carouselImage[activeSlideCarousel].name">
                             <p class="fs-2 position-absolute">{{carouselImage[activeSlideCarousel].name}}</p>
