@@ -23,6 +23,7 @@ const { createApp } = Vue
                 showCanvaB: false,
                 minInput: 25,
                 input: "",
+                showBeCareful: false,
             }
         },
         methods: {
@@ -51,10 +52,18 @@ const { createApp } = Vue
                 this.people.splice(index, 1)
             },
             markAsDone(index){
+                this.showBeCareful = true
                 this.people[index].done = !this.people[index].done
+                this.timeRemoveCareful()
+            },
+            removeCareful(){
+                this.showBeCareful = false
+            },
+            timeRemoveCareful(){
+                setTimeout(this.removeCareful, 2000)
             }
         },
         mounted(){
-            
+
         }
     }).mount('#app')

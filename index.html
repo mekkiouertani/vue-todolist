@@ -21,7 +21,7 @@
                     <button @click="addPerson">Sei sicuro?</button>
                 </div>
                 
-                <div class="book mt-3">
+                <div class="book mt-3 position-absolute">
                     <ul class="mt-2">
                         <li v-for="(person,index) in people" :key="person.id" class="border-bottom d-flex justify-content-between mt-2">
                             <span :class="{'line-through' : person.done}" @click="markAsDone(index)">
@@ -32,6 +32,13 @@
                             </span>
                         </li>
                     </ul>
+                    
+                    <Transition name="slide-fade">
+                        <div id="be-careful" class="position-absolute" v-show="showBeCareful">
+                            <span>Stai attento, non giocare con la morte!</span>
+                        </div>
+                    </Transition>
+                    
                 </div>
                 
                 <Transition name="slide-fade">
