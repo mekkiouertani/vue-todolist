@@ -73,6 +73,9 @@ span.mx-2, li span{
 #off-canva li{
     margin-left: 20px;
 }
+.line-through{
+    text-decoration: line-through;
+}
 /* TRANSITION VUE */
 .slide-fade-enter-active {
     transition: all 0.3s ease-out;
