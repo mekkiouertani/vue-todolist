@@ -100,7 +100,7 @@ const { createApp } = Vue
                 setTimeout(this.removeCareful, 2000)
             },
             nextImage(){
-                (this.activeSlideCarousel === this.people.length - 1) ? this.activeSlideCarousel = 0 : this.activeSlideCarousel++;
+                (this.activeSlideCarousel === this.people.length +1) ? this.activeSlideCarousel = 0 : this.activeSlideCarousel++;
             },
             startAutoPlay(){
                 this.interval = setInterval(this.nextImage, 2500);
