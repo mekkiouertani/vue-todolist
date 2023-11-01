@@ -1,6 +1,7 @@
 body{
     font-family: 'Death Note Font', sans-serif;
     color: white;
+    word-spacing: 5px;
 
     margin: auto;
     overflow: auto;
@@ -85,7 +86,7 @@ span.mx-2, li span{
 #cause{
     font-size: 0.8em;
     margin-left: 20px;
-    width: 200px;
+    width: 250px;
 }
 .form-group input:first-child{
     height: 20px;
