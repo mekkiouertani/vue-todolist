@@ -17,9 +17,10 @@
                 <h1>DEATH NOTE</h1>
                 <p class="fs-5">La persona il cui nome sarà scritto su questo quaderno morirà.</p>
                 <p class="fs-6" @click="showCanva">Leggi le altre regole</p>
-                <div class="form-group">
-                    <input type="text" :maxlength="minInput" v-model="input"  placeholder="Scrivi il nome" class="mx-2" @keyup.enter="addPerson">
+                <div class="form-group position-relative">
+                    <input type="text" :maxlength="maxInput" v-model="input"  placeholder="Scrivi il nome" class="mx-2" @keyup.enter="addPerson">
                     <button @click="addPerson">Sei sicuro?</button>
+                    <input type="text" :maxlength="maxInput" v-model="inputCause" placeholder="Inserisci la causa">
                 </div>
                 
                 <div class="book mt-3 position-relative">
@@ -35,7 +36,7 @@
                         <ul class="mt-2">
                             <li v-for="(person,index) in people" :key="person.id" class="border-bottom d-flex justify-content-between mt-2">
                                 <span :class="{'line-through' : person.done}" @click="markAsDone(index)">
-                                    {{person.name}}
+                                    {{person.name}} <span id="cause">{{person.cause}}</span>
                                 </span>
                                 <span class="mx-2" @click="removePerson(index)">
                                     X

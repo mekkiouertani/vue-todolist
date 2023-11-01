@@ -6,22 +6,25 @@ const { createApp } = Vue
                     { 
                         id: 1,
                         name: "Light Yagami",
+                        cause: "Sconfitto da un ragazzino",
                         done: true
                     },
                     { 
                         id: 2,
                         name: "Eren Jaeger",
+                        cause: "",
                         done: false
                     },
                     { 
                         id: 3,
                         name: "Kaido",
+                        cause: "Annientato da Luffy",
                         done: true
                     },
                 ],
                 lastId: 3,
                 showCanvaB: false,
-                minInput: 25,
+                maxInput: 15,
                 input: "",
                 showBeCareful: false,
                 carouselImage: [
@@ -53,6 +56,7 @@ const { createApp } = Vue
                 ],
                 activeSlideCarousel: 0,
                 interval: null,
+                inputCause: "",
             }
         },
         methods: {
@@ -68,6 +72,7 @@ const { createApp } = Vue
                     id: this.lastId,
                     name: this.input,
                     done: false,
+                    cause: this.inputCause,
                 }
 
                 if(this.input !== "" && this.input !== " "){
@@ -75,6 +80,7 @@ const { createApp } = Vue
                 }
                 
                 this.input = "";
+                this.inputCause = "";
                 console.log(this.people);
             },
             removePerson(index){

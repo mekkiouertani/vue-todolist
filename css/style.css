@@ -81,7 +81,27 @@ span.mx-2, li span{
     font-size: 2em;
     padding: 0 20px;
 }
-
+#cause{
+    font-size: 0.8em;
+    margin-left: 20px;
+    width: 200px;
+}
+.form-group input:first-child{
+    height: 20px;
+    margin-bottom: 20px;
+}
+.form-group input:last-child{
+    display: block;
+    width: 250px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    margin-right: -20px;
+    margin-top: -10px;
+    outline: none;
+    border: 0px;
+}
 /* TRANSITION VUE */
 .slide-fade-enter-active {
     transition: all 0.3s ease-out;
