@@ -59,6 +59,12 @@ const { createApp } = Vue
                 inputCause: "",
                 openBookCoverClass: "",
                 coverDiv: "",
+                rules:[
+                    "Perché il quaderno sortisca l'effetto desiderato, occorre avere in mente il volto della persona di cui si scrive il nome. In tal modo, si evita di colpire eventuali omonimi.",
+                    "Se entro quaranta secondi dopo che è stato scritto il nome vengono indicate anche le cause della morte, questa avverrà nella maniera stabilita.",
+                    "Se le cause non vengono specificate, le vittime designate moriranno tutte per arresto cardiaco.",
+                    " Dopo aver indicato le cause della morte, si hanno a disposizione sei minuti e quaranta secondi per scrivere eventuali dettagli sulle condizioni della stessa.",
+                ],
             }
         },
         methods: {
@@ -83,7 +89,6 @@ const { createApp } = Vue
                 
                 this.input = "";
                 this.inputCause = "";
-                console.log(this.people);
             },
             removePerson(index){
                 this.people.splice(index, 1)

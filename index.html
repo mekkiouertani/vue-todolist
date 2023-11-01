@@ -68,10 +68,7 @@
                         <div id="form-canva" class="container py-4">
                             <button @click="closeCanva">Continua a scrivere nomi</button>
                             <ul class="mt-5">
-                                <li class="mt-4"> Perché il quaderno sortisca l'effetto desiderato, occorre avere in mente il volto della persona di cui si scrive il nome. In tal modo, si evita di colpire eventuali omonimi. </li>
-                                <li class="mt-4"> Se entro quaranta secondi dopo che è stato scritto il nome vengono indicate anche le cause della morte, questa avverrà nella maniera stabilita. </li>
-                                <li class="mt-4"> Se le cause non vengono specificate, le vittime designate moriranno tutte per arresto cardiaco.  </li>
-                                <li class="mt-4"> Dopo aver indicato le cause della morte, si hanno a disposizione sei minuti e quaranta secondi per scrivere eventuali dettagli sulle condizioni della stessa. </li>
+                                <li class="mt-4" v-for="(rule) in rules">{{rule}}</li>
                             </ul>
                         </div>
                     </div>

@@ -193,20 +193,3 @@ opacity: 0;
 .book-cover-div{
     opacity: 0;
 }
-/* .book:hover > .book-cover {
-	transform: rotateY(180deg);
-}
-
-.book:hover > .book-cover > div {
-	opacity: 0;
-}
- */
-/* .book:hover > .book-content {
-	transform: scale(1) translateY(0px);
-}
-
-.book:hover > .book-content h3,
-.book:hover > .book-content p {
-	opacity: 1;
-}
- */
