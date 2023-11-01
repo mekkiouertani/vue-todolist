@@ -22,17 +22,27 @@
                     <button @click="addPerson">Sei sicuro?</button>
                 </div>
                 
-                <div class="book mt-3 position-absolute">
-                    <ul class="mt-2">
-                        <li v-for="(person,index) in people" :key="person.id" class="border-bottom d-flex justify-content-between mt-2">
-                            <span :class="{'line-through' : person.done}" @click="markAsDone(index)">
-                                {{person.name}}
-                            </span>
-                            <span class="mx-2" @click="removePerson(index)">
-                                X
-                            </span>
-                        </li>
-                    </ul>
+                <div class="book mt-3 position-relative">
+                    
+                    <div class="book-cover position-absolute">
+                        <div>
+                            <h2>BOOLEAN NOTE</h2>
+                            <h4 class="position-absolute fs-6 bottom-0 end-0 px-2">Questo libro appartiene a Rem</h4>
+                        </div>
+                    </div>
+
+                    <div class="book-content position-r">
+                        <ul class="mt-2">
+                            <li v-for="(person,index) in people" :key="person.id" class="border-bottom d-flex justify-content-between mt-2">
+                                <span :class="{'line-through' : person.done}" @click="markAsDone(index)">
+                                    {{person.name}}
+                                </span>
+                                <span class="mx-2" @click="removePerson(index)">
+                                    X
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
                     
                     <Transition name="slide-fade">
                         <div id="be-careful" class="position-absolute" v-show="showBeCareful">

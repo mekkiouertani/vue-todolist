@@ -39,12 +39,7 @@ p.fs-6{
 .form-group{
     text-align: right;
 }
-.book{
-    border: 1px solid white;
-    height: 700px;
-    width: 500px;
-    background-image: url(https://img.freepik.com/free-photo/plain-backdrop-decorative-gray-textured_1136-349.jpg?w=996&t=st=1698766106~exp=1698766706~hmac=361c668895e0c9f15ee20b605efb8954a1ea2bb271451fe8eb8eaf494d7a33a7);
-}
+
 #off-canva{
     background-color:rgba(209, 209, 209, 0.5);
     height: 100vh;
@@ -78,14 +73,14 @@ span.mx-2, li span{
 }
 #be-careful{
     top: 0;
-    left: -100px;
-    width: 100px;
+    left: -450px;
+    width: 450px;
     line-height: 3em;
+    z-index: 9002;
+    font-size: 2em;
+    padding: 0 20px;
 }
-#be-careful span{
-    background-color: red;
-    padding: 10px;
-}
+
 /* TRANSITION VUE */
 .slide-fade-enter-active {
     transition: all 0.3s ease-out;
@@ -129,4 +124,58 @@ opacity: 0;
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+/* BOOK COVER */
+.book{
+    border: 1px solid white;
+    height: 700px;
+    width: 500px;
+    background-image: url(https://img.freepik.com/free-photo/plain-backdrop-decorative-gray-textured_1136-349.jpg?w=996&t=st=1698766106~exp=1698766706~hmac=361c668895e0c9f15ee20b605efb8954a1ea2bb271451fe8eb8eaf494d7a33a7);
+}
+.book-cover {
+    height: 100%;
+    width: 100%;
+	overflow: auto;
+    background-image: url(https://images.rawpixel.com/image_1000/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGYtczEyNC10ZC03MTQwXzMuanBn.jpg);
+	border-radius: 6px;
+	transform-origin: left;
+
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	z-index: 9;
+	text-align: center;
+	color: white;
+	transition: transform 2s;
+}
+
+.book-cover::before {
+
+	content: "";
+	position: absolute;
+	width: 20px;
+	right: 20px;
+	top: 0;
+	bottom: 0;
+}
+.book-cover > div:first-child {
+	transition: opacity 0s 0.6s;
+}
+
+.book:hover > .book-cover {
+	transform: rotateY(180deg);
+}
+
+.book:hover > .book-cover > div {
+	opacity: 0;
+}
+
+.book:hover > .book-content {
+	transform: scale(1) translateY(0px);
+}
+
+.book:hover > .book-content h3,
+.book:hover > .book-content p {
+	opacity: 1;
 }
