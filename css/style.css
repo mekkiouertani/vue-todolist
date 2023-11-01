@@ -80,6 +80,7 @@ span.mx-2, li span{
     z-index: 9002;
     font-size: 2em;
     padding: 0 20px;
+    transition: 1.5s;
 }
 #cause{
     font-size: 0.8em;
@@ -183,15 +184,23 @@ opacity: 0;
 	transition: opacity 0s 0.9s;
 }
 
-.book:hover > .book-cover {
+
+.book-cover2 {
+	transform: rotateY(180deg);
+}
+
+.book-cover-div{
+    opacity: 0;
+}
+/* .book:hover > .book-cover {
 	transform: rotateY(180deg);
 }
 
 .book:hover > .book-cover > div {
 	opacity: 0;
 }
-
-.book:hover > .book-content {
+ */
+/* .book:hover > .book-content {
 	transform: scale(1) translateY(0px);
 }
 
@@ -199,3 +208,4 @@ opacity: 0;
 .book:hover > .book-content p {
 	opacity: 1;
 }
+ */

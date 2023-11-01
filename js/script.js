@@ -57,6 +57,8 @@ const { createApp } = Vue
                 activeSlideCarousel: 0,
                 interval: null,
                 inputCause: "",
+                openBookCoverClass: "",
+                coverDiv: "",
             }
         },
         methods: {
@@ -103,6 +105,10 @@ const { createApp } = Vue
             startAutoPlay(){
                 this.interval = setInterval(this.nextImage, 2500);
             },
+            openCoverBook(){
+                this.openBookCoverClass = this.openBookCoverClass === "book-cover2" ? "" : "book-cover2"
+                this.coverDiv = this.coverDiv === "book-cover-div" ? "" : "book-cover-div"
+            }
         },
         mounted(){
             this.startAutoPlay()
